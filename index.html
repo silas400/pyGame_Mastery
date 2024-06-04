@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+</head>
+<body>
+<main>
+
+  <div id="progressBarContainer">
+    <div id="progressBar"></div>
+  </div>
+
+  <div class="container">
+
+    <div id="1" class="lessonChunk">
+
+      <div class="lesson">
+
+        <code>mouse_pos = pygame.mouse.get_pos()</code>
+        <p>This gets the x and y coordinates of the mouse!</p>
+        <p>Must be defined in the loop to work because we must get the position constantly and rapidly!</p>
+
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="2" class="lessonChunk">
+
+      <div class="lesson">
+          <code>player_rect.collidepoint((x, y))</code>
+          <p><strong>collidepoint</strong> is a method that detects whether an object is touching a specific point (x, y) on the screen.</p>
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="3" class="lessonChunk">
+
+      <div class="lesson">
+          
+          <p> <span class="red">PAUSE!</span> Time for a challenge!</p>
+          <p>Lets figure out how to detect if the mouse is hovering over an object!</p>
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="4" class="lessonChunk">
+
+      <div class="lesson">
+          <code>pygame.mouse.get_pressed()</code>
+          <p>Here we detect whether the user is pressing down on a mouse button!</p>
+          <p>It detects true or false values constantly for all 3 buttons.</p>
+          <img src="mouse_true_false_values.png" width="300px" height="auto" alt="">
+          <p>For example, If the left mouse button is held down, the left value will become true</p>
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="5" class="lessonChunk">
+
+      <div class="lesson">
+          <code>if event.type == pygame.MOUSEBUTTONUP</code>
+          <p>This detects when the users releases a mouse button.</p>       
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="6" class="lessonChunk">
+
+      <div class="lesson">
+          <code><span class="red">CHALLENGE!</span></code>
+          <p>Lets make a counter that counts how many times a user clicks! We will assume that a click is when the left mouse button is pressed down and then released.</p>       
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="7" class="lessonChunk">
+
+      <div class="lesson">
+          <code><span class="red">CHALLENGE!</span></code>
+          <p>Make a moving object change color for the whole duration of the loop when you click on it.</p>       
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    
+    <div id="8" class="lessonChunk">
+
+      <div class="lesson">
+          <code style="font-size: 14px;">pygame.draw.line(surface, color, (x, y), (x, y), thickness)</code>
+          <p>Here is how you can draw a line!</p>
+          <p>Example below!</p>
+          <code style="font-size: 14px;">pygame.draw.line(screen, <span class="string">"Green"</span>, (<num>27</num>, <num>80</num>), (<num>100</num>, <num>281</num>), <num>10</num>)</code>
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+
+    <div id="9" class="lessonChunk">
+
+      <div class="lesson">
+        <code><span class="red">CHALLENGE!</span></code>
+        <p>Make a line that goes from the top left of the screen all the way to the bottom right!</p>
+      </div>
+
+      <div class="answerContainer">
+        <button onclick="backButtonClicked()" class="next">Back</button>
+        <button onclick="nextButtonClicked()" class="next">Next</button>
+      </div>
+
+    </div>
+  
+
+  </div>
+
+
+
+
+
+<button style="display: none;" class="explain-button">Explain Better</button>
+
+
+
+<button style="display: none;" class="rightArrow">></button>
+<button style="display: none;" class="leftArrow"><</button>
+
+<h2></h2>
+
+<div style="display: none;" class="contentExplained">
+
+</div>
+
+<audio id="myAudio" src="Silas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</main>
+</body>
+</html>
+  
